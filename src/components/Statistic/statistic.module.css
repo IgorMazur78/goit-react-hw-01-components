@@ -1,0 +1,52 @@
+.containerStat{
+    margin: 20px;
+    background-color: #e9d7d7;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width: 300px;
+    height: 110px;
+}
+.title{
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14;
+}
+.statList{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    width: 299px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border:0.5px solid #212121 ;
+    width: 59.5px;
+   
+
+}
+.item:nth-child(2){
+    background-color: darkviolet;
+}
+.item:nth-child(3){
+    background-color: gold;
+}
+.item:nth-child(4){
+    background-color: rgb(59, 99, 207);
+}
+.item:nth-child(5){
+    background-color: rgb(7, 4, 59);
+}
+
+    
+    
+    
+    
+
