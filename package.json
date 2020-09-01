@@ -2,7 +2,7 @@
   "name": "goit-react-hw-01-components",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/IgorMazur78/goit-react-hw-01-components.git",
+  "homepage": "https://igormazur78.github.io/goit-react-hw-01-components",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
