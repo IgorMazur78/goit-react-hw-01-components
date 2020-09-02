@@ -1,25 +1,24 @@
 import React from "react";
 import T from "prop-types";
-import style from "./Profile.module.css"
+import s from "./Profile.module.css"
 
 
-const Profile = ({ user}) => {
-  const { name, tag, location, avatar, stats } = user;
+const Profile = ({ name, tag, location, avatar, stats}) => {
 
   return (
-    <div className={style.profile}>
-      <div className={style.description}>
-        <img src={avatar} alt={name} className={style.avatar} />
-        <p className={style.name}>{name}</p>
-        <p className={style.tag}>@{tag}</p>
-        <p className={style.location}>{location}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt={name} className={s.avatar} />
+        <p className={s.name}>{name}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
 
-      <ul className={style.stats}>
-        {Object.keys(stats).map((e,i) => (
-          <li className = {style.statsItem}key={e}>
-            <span className={style.label}>{e}</span>
-            <span className={style.quantity}>{stats[e]}</span>
+      <ul className={s.stats}>
+        {Object.keys(stats).map((e) => (
+          <li className = {s.statsItem} key={e}>
+            <span className={s.label}>{e}</span>
+            <span className={s.quantity}>{stats[e]}</span>
           </li>
         ))}
       </ul>

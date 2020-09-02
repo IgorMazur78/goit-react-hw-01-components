@@ -1,30 +1,18 @@
 import React from "react";
 import T from "prop-types";
-import style from "./friendsList.module.css";
+import s from "./friendsList.module.css";
 
-const FriendsList = ({ friend }) => {
+const FriendsList = ({ friendsData }) => {
   return (
-    <>
-      <ul className={style.friendList}>
-        {friend.map(
-          (e) =>
-            e !== "id" && (
-              <li key={e.id} className={style.item}>
-                <span
-                  className={e.isOnline ? style.statusOn : style.statusOff}
-                ></span>
-                <img
-                  className={style.avatar}
-                  src={e.avatar}
-                  alt={e.name}
-                  width="48"
-                />
-                <p className={style.name}>{e.name}</p>
-              </li>
-            )
-        )}
-      </ul>
-    </>
+    <ul className={s.friendList}>
+      {friendsData.map(({ id, avatar, name, isOnline }) => (
+        <li key={id} className={s.item}>
+          <span className={isOnline ? s.statusOn : s.statusOff}></span>
+          <img className={s.avatar} src={avatar} alt={name} width="48" />
+          <p className={s.name}>{name}</p>
+        </li>
+      ))}
+    </ul>
   );
 };
 export default FriendsList;

@@ -1,20 +1,22 @@
 import React from "react";
 import T from "prop-types";
-import style from "./statistic.module.css";
+import s from "./statistic.module.css";
 
-const Statistics = ({ stat, title }) => {
+const withoutTitle = "";
+
+const Statistics = ({ data, title }) => {
   return (
-    <div className={style.containerStat}>
-      {title.length > 0 ? (
-        <h2 className={style.title}>{title}</h2>
+    <div className={s.containerStat}>
+      {title ? (
+        <h2 className={s.title}>{title}</h2>
       ) : (
-        <h2 className={style.title}></h2>
+      <h2 className={s.title}>{withoutTitle}</h2>
       )}
-      <ul className={style.statList}>
-        {stat.map((e) => (
-          <li key={e.id} className={style.item}>
-            <span className={style.label}>{e.label}</span>
-            <span className={style.percentage}>{e.percentage}</span>{" "}
+      <ul className={s.statList}>
+        {data.map(({id,label,percentage}) => (
+          <li key={id} className={s.item}>
+            <span className={s.label}>{label}</span>
+            <span className={s.percentage}>{percentage}</span>
           </li>
         ))}
       </ul>
