@@ -1,5 +1,5 @@
 .profile{
-    
+    margin: 50px;
     background-color: cadetblue;
     display:flex;
     flex-direction: column;
