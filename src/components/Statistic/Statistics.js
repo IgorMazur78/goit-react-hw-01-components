@@ -1,13 +1,13 @@
 import React from "react";
-import T from "prop-types";
 
+import T from "prop-types";
 import s from "./statistic.module.css";
 
-const Statistics = ({ data, title }) => {
+const Statistics = ({ data,title}) => {
   const isShowTitle = title;
   return (
     <div className={s.containerStat}>
-      {isShowTitle.length > 0 && <h2 className={s.title}>{title}</h2>}
+      {isShowTitle && <h2 className={s.title}>{title}</h2>}
       <ul className={s.statList}>
         {data.map(({ id, label, percentage }) => (
           <li key={id} className={s.item}>

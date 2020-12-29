@@ -17,7 +17,7 @@ const App = () => {
     <div className="app">
       <Profile {...user} />
 
-      <Statistics data={statisticData} title="" />
+      <Statistics data={statisticData} />
 
       <FriendsList friendsData={friends} />
 
